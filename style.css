@@ -1,18 +1,174 @@
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
   }
 
+html {
+    width: 100%;
+    height: 100%;
+}
 body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
     font-family: 'Inter', sans-serif;
     background-color: rgb(240, 228, 212);
-    margin: 40px 140px 0px 140px;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 }
 
+.wrapper {
+    width: 1920px;
+}
+
+
 .header-wrapper {
+    width: 100%;
     border-bottom: 1px solid rgb(116, 114, 114);
     font-weight: 700;
     font-size: 2em;
 }
 
+.main-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+}
+
+.first_meme, .second_meme {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
 
 
+.meme-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+
+.first_span {
+    opacity: 0;
+    width: 32px;
+    height: 3px;
+    position: absolute;
+    background-color: black;
+    border-radius: 3px;
+    top: 40px;
+    right: 20px;
+    transition: 0.3s;
+}
+
+.second_span {
+    opacity: 0;
+    width: 3px;
+    height: 32px;
+    position: absolute;
+    background-color: black;
+    border-radius: 3px;
+    top: 26px;
+    right: 34px;
+    transition: 0.3s;
+}
+
+body:hover  .first_span {
+    opacity: 1;
+}
+
+body:hover  .second_span {
+    opacity: 1;
+}
+
+.blue {
+    color: blue;
+    transition: .3s;
+}
+
+body:hover  .blue {
+    color: black;
+}
+
+.description {
+    cursor: pointer;
+    display: block;
+    padding-top: 15px;
+}
+
+.mem {
+    margin: auto;
+    min-width: 450px;
+    min-height: 700px;
+    background-image: url(accets/1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+    transition: 0.3s;
+    position: static;
+}
+
+.inputCheck {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+}
+
+.inputCheck:checked~.mem,
+.inputCheck:hover~.mem {
+    display: block;
+}
+
+
+.mem2 {  
+    margin: auto;
+    min-width: 450px;
+    min-height: 700px;
+    background-image: url(accets/2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+    transition: 0.3s;
+}
+
+.inputCheck2 {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+}
+
+.inputCheck2:checked~.mem2,
+.inputCheck2:hover~.mem2 {
+    display: block;
+}
+
+
+.mem3 {  
+    margin: auto;
+    min-width: 450px;
+    min-height: 700px;
+    background-image: url(accets/3.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+    transition: 0.3s;
+}
+
+.inputCheck3 {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+}
+
+.inputCheck3:checked~.mem3,
+.inputCheck3:hover~.mem3 {
+    display: block;
+}
