@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: rgb(240, 228, 212);
+    margin: 40px 140px 0px 140px;
+}
+
+.header-wrapper {
+    border-bottom: 1px solid rgb(116, 114, 114);
+    font-weight: 700;
+    font-size: 2em;
+}
+
+
+
